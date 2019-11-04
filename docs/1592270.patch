@@ -1,0 +1,25 @@
+From a9ecdd1e4cef5ab22fdf26f3014311328f8cd39a Mon Sep 17 00:00:00 2001
+From: Tanveer Gill <tanveergill31@gmail.com>
+Date: Mon, 4 Nov 2019 16:22:01 -0500
+Subject: [PATCH 1/1] Bug 1592270 - Remove the continue statement at the end
+ loop
+
+---
+ dom/media/MediaCache.cpp | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/dom/media/MediaCache.cpp b/dom/media/MediaCache.cpp
+index 6cb0f34763c3..0ccab6957285 100644
+--- a/dom/media/MediaCache.cpp
++++ b/dom/media/MediaCache.cpp
+@@ -2558,7 +2558,6 @@ nsresult MediaCacheStream::Read(AutoLock& aLock, char* aBuffer, uint32_t aCount,
+ 
+     // No data to read, so block
+     aLock.Wait();
+-    continue;
+   }
+ 
+   uint32_t count = buffer.Elements() - aBuffer;
+-- 
+2.23.0
+
