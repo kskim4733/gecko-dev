@@ -1,0 +1,21 @@
+# HG changeset patch
+# User kyle <kskim.kim@mail.utoronto.ca>
+# Date 1573422271 18000
+#      Sun Nov 10 16:44:31 2019 -0500
+# Node ID bec07421b2c74bb2ffa1a8e7f518066633a26d12
+# Parent  af2270107a6a7db84e1824dc74ff3ed7404085f8
+Bug 1570502 - bugfix 1570502 fixed typo erroCodeString to errorCodeStrng
+
+
+diff --git a/browser/base/content/aboutNetError.js b/browser/base/content/aboutNetError.js
+--- a/browser/base/content/aboutNetError.js
++++ b/browser/base/content/aboutNetError.js
+@@ -766,7 +766,7 @@ async function setCertErrorDetails(event
+     // Also don't bother if it's just the user's clock being off...
+     !clockSkew &&
+     // Symantec distrust is likely harmless as well.
+-    failedCertInfo.erroCodeString !=
++    failedCertInfo.errorCodeString !=
+       "MOZILLA_PKIX_ERROR_ADDITIONAL_POLICY_CONSTRAINT_FAILED"
+   ) {
+     document.body.classList.add("caution");
