@@ -6,7 +6,6 @@
 # Parent  af2270107a6a7db84e1824dc74ff3ed7404085f8
 Bug 1570502 - bugfix 1570502 fixed typo erroCodeString to errorCodeStrng
 
-Differential Revision: https://phabricator.services.mozilla.com/D52492
 
 diff --git a/browser/base/content/aboutNetError.js b/browser/base/content/aboutNetError.js
 --- a/browser/base/content/aboutNetError.js
